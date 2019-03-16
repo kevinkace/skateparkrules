@@ -3,14 +3,14 @@
     <div>
       <logo />
       <h1 class="title">
-        skateparkrules
+        Skatepark Rules
       </h1>
       <h2 class="subtitle">
-        Skatepark Rules
+        How to be cool and have a good time.
       </h2>
       <div class="links">
         <a
-          href="https://github.com/kevinkace/skateparkrules#skateparkrules"
+          href="https://github.com/kevinkace/skateparkrules/blob/master/README.md"
           target="_blank"
           class="button--green"
         >Info</a>

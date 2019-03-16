@@ -10,15 +10,15 @@
       </h2>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://github.com/kevinkace/skateparkrules#skateparkrules"
           target="_blank"
           class="button--green"
-        >Documentation</a>
+        >Info</a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/kevinkace/skateparkrules/issues/new"
           target="_blank"
           class="button--grey"
-        >GitHub</a>
+        >Submit a rule</a>
       </div>
     </div>
   </section>

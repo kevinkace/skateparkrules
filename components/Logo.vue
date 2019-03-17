@@ -1,8 +1,7 @@
 
 <template>
   <div class="logo">
-    <!-- {{.map(char => <span>things</span>)}} -->
-    <span v-for="char in monogram">
+    <span v-for="char in monogram" :key="char">
       {{ char }}
     </span>
   </div>

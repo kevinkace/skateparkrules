@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      monogram : 'SR'
+      monogram : "SR"
     }
   }
 }

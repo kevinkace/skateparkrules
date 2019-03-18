@@ -40,7 +40,12 @@ export default {
   */
   modules: [
     '@nuxtjs/pwa',
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+    // proxyHeaders: false
+  },
 
   /*
   ** Build configuration

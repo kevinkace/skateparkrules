@@ -8,6 +8,7 @@
       <h2 class="subtitle">
         How to be cool and have a good time.
       </h2>
+      <rules />
       <div class="links">
         <a
           href="https://github.com/kevinkace/skateparkrules/blob/master/README.md"
@@ -26,7 +27,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue';
-import Rules from '~components/Rules.vue';
+import Rules from '~/components/Rules.vue';
 
 export default {
   components : {

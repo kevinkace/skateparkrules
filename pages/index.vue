@@ -25,11 +25,13 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo.vue';
+import Rules from '~components/Rules.vue';
 
 export default {
-  components: {
-    Logo
+  components : {
+    Logo,
+    Rules
   }
 }
 </script>

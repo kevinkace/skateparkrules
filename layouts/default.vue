@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style module>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -51,5 +51,13 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+:global(.fontHeader) {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+:global(.fontBody) {
+  font-family: 'Roboto', sans-serif;
 }
 </style>

@@ -14,7 +14,8 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto:400,400i,700" }
     ]
   },
 
@@ -28,6 +29,9 @@ export default {
   */
   css: [
   ],
+  cssModules: {
+    localIdentName: '[local]_[hash:base64:5]'
+  },
 
   /*
   ** Plugins to load before mounting the App
@@ -50,6 +54,12 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+    },
+
+    postcss: {
+      plugins: {
+        "postcss-nested": {}
+      }
     }
   }
 }

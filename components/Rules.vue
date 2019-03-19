@@ -7,16 +7,9 @@
 </template>
 
 <script>
-// import { mapMutations } from 'vuex';
 import axios from 'axios';
 
 export default {
-  // computed : {
-  //   rules() {
-  //     return this.$store.state.rules;
-  //   }
-  // },
-
   data() {
     return {
       rules : []
@@ -28,12 +21,6 @@ export default {
 
     return { rules : data }
   }
-
-  // methods : {
-  //   addTodo(e) {
-  //     this.$store.commit('add');
-  //   }
-  // }
 }
 </script>
 

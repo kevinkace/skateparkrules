@@ -1,35 +1,44 @@
 
 <template>
-  <div class=$style.rules>
+  <div :class="$style.rules">
     Rules
-    <span v-for="rule in rules">
-      <h2>{{ rule.title }}</h2>
-      <p>{{ rule.desc }}</p>
-    </span>
-    <input placeholder="What needs to be done?" @keyup.enter="addTodo">
+    {{ rules }}
   </div>
 </template>
 
 <script>
 // import { mapMutations } from 'vuex';
+import axios from 'axios';
 
 export default {
-  computed : {
-    rules() {
-      return this.$store.state.rules;
-    }
+  // computed : {
+  //   rules() {
+  //     return this.$store.state.rules;
+  //   }
+  // },
+
+  data() {
+    return {
+      rules : []
+    };
   },
 
-  methods : {
-    addTodo(e) {
-      this.$store.commit('add');
-    }
+  async asyncData (context) {
+    let { data } = await axios.get(`https://api.github.com/repos/kevinkace/skateparkrules/issues`);
+
+    return { rules : data }
   }
+
+  // methods : {
+  //   addTodo(e) {
+  //     this.$store.commit('add');
+  //   }
+  // }
 }
 </script>
 
 <style module>
 .rules {
-
+  color: orange;
 }
 </style>

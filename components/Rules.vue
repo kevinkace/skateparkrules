@@ -1,9 +1,11 @@
 
 <template>
-  <div :class="$style.rules">
-    Rules:
-    {{ rules }}
-  </div>
+  <ol :class="$style.rules">
+    <li v-for="rule in rules" v-bind:key="rule.id">
+      <h2>{{ rule.title }}</h2>
+      <p>{{ rule.body }}</p>
+    </li>
+  </ol>
 </template>
 
 <script>
@@ -16,6 +18,6 @@ export default {
 
 <style module>
 .rules {
-  color: orange;
+  text-align: left;
 }
 </style>

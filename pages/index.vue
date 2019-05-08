@@ -50,6 +50,7 @@ export default {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
+  max-width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;

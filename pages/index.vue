@@ -8,7 +8,8 @@
       <h2 class="subtitle">
         How to be cool and have a good time.
       </h2>
-      <rules />
+      <rules :rules="rules"/>
+
       <div class="links">
         <a
           href="https://github.com/kevinkace/skateparkrules/blob/master/README.md"
@@ -28,11 +29,18 @@
 <script>
 import Logo from '~/components/Logo.vue';
 import Rules from '~/components/Rules.vue';
+import axios from 'axios';
 
 export default {
   components : {
     Logo,
     Rules
+  },
+
+  async asyncData (context) {
+    let { data } = await axios.get(`https://api.github.com/repos/kevinkace/skateparkrules/issues`);
+
+    return { rules : data }
   }
 }
 </script>

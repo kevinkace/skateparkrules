@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     <div>
-      <logo />
       <h1 class="title">
         Skatepark Rules
       </h1>
@@ -27,13 +26,11 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue';
 import Rules from '~/components/Rules.vue';
 import axios from 'axios';
 
 export default {
   components : {
-    Logo,
     Rules
   },
 
@@ -50,7 +47,6 @@ export default {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
-  max-width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;

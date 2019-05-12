@@ -15,7 +15,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto:400,400i,700" }
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto:400,400i,700" },
+      { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" }
     ]
   },
 

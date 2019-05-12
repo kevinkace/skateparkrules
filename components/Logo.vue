@@ -23,7 +23,7 @@ export default {
 
   display: flex;
   justify-content: center;
-  width: 100vw;
+  max-width: 100%;
   overflow: hidden;
 
   color: red;

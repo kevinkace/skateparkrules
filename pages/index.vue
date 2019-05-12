@@ -37,7 +37,7 @@ export default {
   async asyncData (context) {
     let { data } = await axios.get(`https://api.github.com/repos/kevinkace/skateparkrules/issues`);
 
-    return { rules : data }
+    return { rules : data.filter(rule => rule.labels.some(label => label.name === "rule")) }
   }
 }
 </script>
@@ -53,6 +53,7 @@ export default {
 }
 
 .title {
+  margin-bottom: 0;
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;

@@ -29,15 +29,45 @@
 import Rules from '~/components/Rules.vue';
 import axios from 'axios';
 
+const yamlRegex  = /^---\r\n(.*)\r\n---\r\n(.*)/;
+const orderRegex = /.*order: (\d*).*/;
+
 export default {
   components : {
     Rules
   },
 
   async asyncData (context) {
-    let { data } = await axios.get(`https://api.github.com/repos/kevinkace/skateparkrules/issues`);
+    const { data } = await axios.get(`https://api.github.com/repos/kevinkace/skateparkrules/issues`);
+    const rules    = data
+      .filter(rule => rule.labels.some(label => label.name === "rule"))
+      .map((rule => {
+        const parsed = rule.body.match(yamlRegex);
 
-    return { rules : data.filter(rule => rule.labels.some(label => label.name === "rule")) }
+        if (parsed && parsed[1] && parsed[2]) {
+          rule.header = parsed[1];
+          rule.body   = parsed[2];
+        }
+
+        if (rule.header) {
+          const order = rule.header.match(orderRegex);
+
+          if (order) {
+            rule.order = order[1];
+          }
+        }
+
+        return rule;
+      }))
+      .sort((ruleA, ruleB) => {
+        if (!ruleA.order || !ruleB.order || ruleA.order < ruleB.order) {
+          return 1;
+        }
+
+        return -1;
+      });
+
+    return { rules };
   }
 }
 </script>

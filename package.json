@@ -14,7 +14,7 @@
     "@nuxtjs/axios": "^5.8.0",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^6.0.3",
-    "nuxt": "^2.10.2",
+    "nuxt": "^2.15.8",
     "postcss-nested": "^4.2.1"
   },
   "devDependencies": {
